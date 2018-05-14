@@ -37,10 +37,18 @@
 
 typedef unsigned char  type8;
 typedef signed   char  type8s;
+
+#if defined(__APPLE__)
+typedef uint16_t type16;
+typedef int16_t type16s;
+typedef uint32_t type32;
+typedef int32_t type32s;
+#else
 typedef unsigned short type16;
 typedef signed   short type16s;
 typedef unsigned long  type32;
 typedef signed   long  type32s;
+#endif
 
 /****************************************************************************\
 * Compile time switches 
